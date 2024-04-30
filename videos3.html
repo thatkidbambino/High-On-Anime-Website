@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos - High On Anime</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="hoa.png" alt="Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link" id="home-page">Home</a>
+        <a href="about.html" class="nav-link" id="about-page">About</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link active">Videos <i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="videos.html">Latest</a>
+            <a href="videos2.html">Oldest</a>
+            <a href="videos3.html" class="dropdown-active">Most Popular</a>
+          </div>
+        </div>
+        <a href="merchandise.html" class="nav-link" id="merch-page">Merchandise</a>
+        <a href="contact.html" class="nav-link" id="contact-page">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="team">
+      <h2 class="team-header">Our Videos</h2>
+      <section class="video-selector-section">
+        <select id="video-selector-page" name="video-selector-page" onchange="location = this.value;">
+          <option value="videos.html">Latest</option>
+          <option value="videos2.html">Oldest</option>
+          <option value="videos3.html" selected>Most Popular</option>
+        </select>
+      </section>
+      <div id="videos-list">
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts3.js"></script>
+  <script>
+    document.getElementById('video-selector-page').addEventListener('change', function () {
+      window.location.href = this.value;
+    });
+  </script>
+</body>
+
+</html>
